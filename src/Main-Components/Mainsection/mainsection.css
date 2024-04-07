@@ -1,0 +1,7 @@
+:root {
+    --opacity: 1;
+  }
+  
+  .bg-background {
+    background-color: rgba(11, 19, 36, var(--opacity,1)) !important;
+  }

@@ -1,0 +1,24 @@
+.text-footer-gray{
+    color: #64748b;
+}
+.footer-anchor{
+    padding: 0 0 !important;
+}
+.footer-anchor:hover{
+    color: #754ffe !important ;
+    
+}
+.footer-svg{
+    color: #754ffe;
+  
+}
+.mail-anchor{
+    color: #754ffe;
+}
+:root {
+    --opacity: 1;
+  }
+  
+  .bg-background {
+    background-color: rgba(11, 19, 36, var(--opacity,1)) !important;
+  }
