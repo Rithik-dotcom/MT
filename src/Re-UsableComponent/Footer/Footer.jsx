@@ -1,15 +1,43 @@
 import React from 'react'
 import './footer.css'
+import logo from '../../../src/Media_assets/logo/logo2.png'
 const Footer = () => {
     return (
         <div>
+{/* image_alt */}
+{/* <section class="pb-lg-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-10 offset-xl-1 col-md-12 col-12">
+                            <div class="bg-primary py-6 px-6 px-xl-0 rounded-4">
+                                <div class="row align-items-center">
+                                    <div class="offset-xl-1 col-xl-5 col-md-6 col-12">
+                                        <div>
+                                            <h2 class="h1 text-white mb-3">Let's find the right course for you!</h2>
+                                            <p class="text-white-50 fs-4">…and achieve their learning goals. With our expert tutors, your goals are closer than ever!</p>
+                                            <button class="btn btn-dark">Start learning</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-md-6 col-12">
+                                        <div class="text-center d-none d-md-block">
+                                            <img src="../../assets/images/education/course.png" alt="learning" class="img-fluid"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> */}
+{/* image_alt */}
+            <hr class="my-0 bg-transparent text-white"></hr>
             <footer class="pt-lg-8 pt-5 footer bg-background">
                 <div class="container mt-lg-2">
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-12">
                             {/* <!-- about company --> */}
                             <div class="mb-4">
-                                <img src="https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-picture-icon-png-image_890152.jpg" style={{height:"5vh"}} alt="Geeks" class="logo-inverse" />
+                            <a className="" href="./index.html"><img className='logo-adjust' src={logo} width="70vb" height="50vh" alt="geeks UI logo" /></a> <p className='text-white'>Manav Technology</p>
                                 <div class="mt-4">
                                     <p className='text-footer-gray'>Geek is feature-rich components and beautifully Bootstrap UIKit for developers, built with bootstrap responsive framework.</p>
                                     {/* <!-- social media --> */}
@@ -92,7 +120,7 @@ const Footer = () => {
                                                 document.getElementById("copyright5").appendChild(document.createTextNode(new Date().getFullYear()));
                                             </script>2024
                                         </span>
-                                        Geeks-UI
+                                        _GSK-PVT LTD
                                     </span>
                                 </div>
                                 <div>
@@ -107,13 +135,12 @@ const Footer = () => {
                         </div>
 
                         {/* <!-- Links --> */}
-                        <div class="col-12 col-md-2 d-md-flex justify-content-end">
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle text-body" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fe fe-globe me-2 align-middle"></i>
-                                    Language
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <div class=" fixed-bottom arrow">
+                            <div >
+                              <a href="#">
+                              <i class="bi bi-arrow-up-circle-fill text-warning fs-2"></i>
+                              </a>
+                                {/* <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <li>
                                         <a class="dropdown-item" href="#">
                                             <span class="me-2">
@@ -173,7 +200,7 @@ const Footer = () => {
                                             Deutsch
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div>
                     </div>

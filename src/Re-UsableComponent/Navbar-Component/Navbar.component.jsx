@@ -1,22 +1,26 @@
-import React from 'react'
-import './Navbar.style.css'
+import React, { useState } from 'react'
+import './Navbar.style.css';
+import logo from '../../../src/Media_assets/logo/logo2.png';
+
 const Navbar = () => {
-    
+ 
+
     return (
         <div>
-            <nav className=" navbar-shadow navbar navbar-expand-lg navbar-dark is-navbar-dark w-100 ">
-                <div className="container px-0">
-                    <a className="navbar-brand" href="./index.html"><img src="https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-picture-icon-png-image_890152.jpg" width="40vb" height="40vh" alt="geeks UI logo" /></a>
+
+            <nav id="main" className="nav-main-div navbar-shadow navbar navbar-expand-lg navbar-dark is-navbar-dark w-100  ">
+                <div className="container px-0" style={{ color: "burlywood" }}>
+                    <a className="" href="/"><img className='logo-adjust' src={logo} width="70vb" height="50vh" alt="geeks UI logo" /></a> ManavTechnology
                     {/* <!-- Button --> */}
                     <button className="navbar-toggler collapsed allign-item-navbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="icon-bar top-bar mt-0"></span>
-                        <span className="icon-bar middle-bar"></span>
+                        <span className="icon-bar bi bi-distribute-vertical top-bar mt-0" style={{ color: "black" }}></span>
+                        <span className="icon-bar  middle-bar"></span>
                         <span className="icon-bar bottom-bar"></span>
                     </button>
                     {/* <!-- Collapse --> */}
                     <div className="collapse navbar-collapse " id="navbar-default">
-                        <ul className="navbar-nav">
-                            <li className="nav-item dropdown">
+                        <ul className="navbar-nav navbar-nav-edit">
+                            <li className="nav-item dropdown li-navbar">
                                 <a className="nd  nav-link dropdown-toggle pt-4 navbar-ul-style" href="#" id="navbarLanding" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Landings
                                 </a>
@@ -517,67 +521,263 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item ">
                                 <a className=" nd nav-link pt-4 navbar-ul-style" href="https://geeksui.codescandy.com/geeks/pages/dashboard/admin-dashboard.html">
-                                    Dashboard
+                                    About
                                 </a>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nd nav-link dropdown-toggle pt-4 navbar-ul-style" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Docs
                                 </a>
-                                <div className="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDropdown">
-                                    <div className="list-group">
-                                        <a className="list-group-item list-group-item-action border-0" href="https://geeksui.codescandy.com/geeks/docs/index.html">
-                                            <div className="d-flex align-items-center">
-                                                <i className="fe fe-file-text fs-3 text-primary"></i>
-                                                <div className="ms-3">
-                                                    <h5 className="mb-0">Documentations</h5>
-                                                    <p className="mb-0 fs-6">
-                                                        Browse the all documentation
-                                                    </p>
-                                                </div>
-                                            </div>
+                                <ul className="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarPages">
+                                    <li className="dropdown-submenu dropend">
+                                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                            Courses
                                         </a>
-                                        <a className="list-group-item list-group-item-action border-0" href="https://geeksui.codescandy.com/geeks/docs/bootstrap-5-snippets.html">
-                                            <div className="d-flex align-items-center">
-                                                <i className="bi bi-files fs-3 text-primary"></i>
-                                                <div className="ms-3">
-                                                    <h5 className="mb-0">
-                                                        Snippet
-                                                    </h5>
-                                                    <p className="mb-0 fs-6">Bunch of Snippet</p>
-                                                </div>
-                                            </div>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-single.html">
+                                                    Course Single
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-single-v2.html">
+                                                    Course Single v2
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-resume.html">
+                                                    Course Resume
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">
+                                                    Course Category
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-checkout.html">
+                                                    Course Checkout
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-filter-list.html">
+                                                    Course List/Grid
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/add-course.html">
+                                                    Add New Course
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li className="dropdown-submenu dropend">
+                                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                            Paths
                                         </a>
-                                        <a className="list-group-item list-group-item-action border-0" href="https://geeksui.codescandy.com/geeks/docs/changelog.html">
-                                            <div className="d-flex align-items-center">
-                                                <i className="fe fe-layers fs-3 text-primary"></i>
-                                                <div className="ms-3">
-                                                    <h5 className="mb-0">
-                                                        Changelog <span className="text-primary ms-1" id="changelog">v3.1.1</span>
-                                                    </h5>
-                                                    <p className="mb-0 fs-6">See what's new</p>
-                                                </div>
-                                            </div>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <a href="https://geeksui.codescandy.com/geeks/pages/course-path.html" className="dropdown-item">
+                                                    Browse Path
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://geeksui.codescandy.com/geeks/pages/course-path-single.html" className="dropdown-item">
+                                                    Path Single
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li className="dropdown-submenu dropend">
+                                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                            Blog
                                         </a>
-                                        <a className="list-group-item list-group-item-action border-0" href="https://geeksui.codescandy.com/geeks-rtl/index.html" target="_blank">
-                                            <div className="d-flex align-items-center">
-                                                <i className="fe fe-toggle-right fs-3 text-primary"></i>
-                                                <div className="ms-3">
-                                                    <h5 className="mb-0">RTL demo</h5>
-                                                    <p className="mb-0 fs-6">
-                                                        RTL Pages
-                                                    </p>
-                                                </div>
-                                            </div>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/blog.html">
+                                                    Listing</a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/blog-single.html">
+                                                    Article
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/blog-category.html">
+                                                    Category</a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/blog-sidebar.html">
+                                                    Sidebar</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li className="dropdown-submenu dropend">
+                                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                            Career
                                         </a>
-                                    </div>
-                                </div>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/career.html">
+                                                    Overview</a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/career-list.html">
+                                                    Listing
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/career-single.html">
+                                                    Opening</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li className="dropdown-submenu dropend">
+                                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                            Portfolio
+                                        </a>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/portfolio.html">
+                                                    List</a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/portfolio-single.html">
+                                                    Single
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+                                    <li className="dropdown-submenu dropend">
+                                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                            Job
+                                        </a>
+                                        <ul className="dropdown-menu">
+
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/landings/landing-job.html">
+                                                    Home</a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/jobs/job-listing.html">
+                                                    List
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/jobs/job-grid.html">
+                                                    Grid
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/jobs/job-single.html">
+                                                    Single
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/jobs/company-list.html">
+                                                    Company List
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/jobs/company-about.html">
+                                                    Company Single
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+                                    <li className="dropdown-submenu dropend">
+                                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                            Specialty
+                                        </a>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/coming-soon.html">
+                                                    Coming Soon
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/404-error.html">
+                                                    Error 404
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/maintenance-mode.html">
+                                                    Maintenance Mode
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/terms-condition-page.html">
+                                                    Terms &amp; Conditions
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <hr className="mx-3" />
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/about.html">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li className="dropdown-submenu dropend">
+                                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                            Help Center
+                                        </a>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/help-center.html">
+                                                    Help Center
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/help-center-faq.html">
+                                                    FAQ's
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/help-center-guide.html">
+                                                    Guide
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/help-center-guide-single.html">
+                                                    Guide Single
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/help-center-support.html">
+                                                    Support
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/pricing.html">
+                                            Pricing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/compare-plan.html">
+                                            Compare Plan
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/contact.html">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
-                        <div className="ms-auto  ">
+                        {/* <div className="ms-auto  ">
 
                             <a href="https://bit.ly/geeksui" className="btn  btn-prime login-button-nav "><i class="bi bi-person-plus-fill icon-login"></i> &nbsp; Login</a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </nav>

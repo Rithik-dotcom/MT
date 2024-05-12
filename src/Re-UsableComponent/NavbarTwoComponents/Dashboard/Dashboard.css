@@ -1,0 +1,77 @@
+
+
+.main{
+  display: flex;
+  /* height: 200vh; */
+}
+.section-one{
+width: 70%;
+height: auto;
+background-color: #09111e;
+
+}
+
+.section-two{
+width: 30%;
+height: auto;
+background-color:black;
+}
+
+
+.video-card {
+  overflow: hidden;
+  padding-bottom: 75%;
+
+}
+@media(min-width: 768px) {
+  .video-card {
+    padding-bottom:50%;
+  }
+}
+
+.video-card .hover {
+  cursor: pointer;
+  /* position: absolute; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: rgba(0,0,0,0.75);
+  transition: opacity 0.4s;
+height: 100%;
+}
+.video-card:hover .hover {
+  opacity: 1;
+  
+}
+
+.video-card .video-title {
+  opacity: 1;
+  background: rgba(0,0,0,0.5); 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  cursor: pointer;
+  transition: opacity 0.4s;
+}
+.video-card:hover .video-title {
+  opacity: 0;
+}
+.left-container{
+width: 100vb;
+}
+
+.circle-main{
+  width: 70%;
+  height: 75vh;
+  margin-top: 0%;
+}
+.join-options{
+  width: 30%;
+  margin-top: 2%;
+}

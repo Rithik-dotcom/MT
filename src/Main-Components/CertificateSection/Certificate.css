@@ -1,0 +1,23 @@
+:root {
+    --opacity: 1;
+  }
+  
+  .certificate-background{
+    background-color: rgba(11, 19, 36, var(--opacity,1)) !important;
+padding-bottom: 5%;
+  }
+  .certificate-background h2 {
+    color: white;
+  }
+  .certificate-background h4 {
+    color: white;
+  }
+  .certificate-background p {
+    color: #475569;;
+  }
+  svg {
+    fill: #754ffe;
+  }
+  span {
+    color: #754ffe !important;
+  }

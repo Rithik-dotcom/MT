@@ -5,3 +5,12 @@
   .bg-background {
     background-color: rgba(11, 19, 36, var(--opacity,1)) !important;
   }
+
+  .border-manage{
+    padding-bottom: 10%;
+  }
+  .card-anchor{
+    text-decoration: none;
+    font-size: large;
+    position: static !important;
+  }

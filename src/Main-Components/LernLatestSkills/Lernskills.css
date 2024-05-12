@@ -1,0 +1,62 @@
+.play-edit {
+    background-color: white;
+    color: #754ffe;
+    transition: .2s ease;
+    border-radius: 50% !important;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    
+    line-height: 3.5rem;
+    /* width: 3.5rem; */
+    cursor: pointer;
+    font-size: xx-large;
+
+}
+
+.play-edit:hover {
+    background-color: black;
+    color: #754ffe;
+}
+
+:root {
+    --opacity: 1;
+}
+
+.lernskill-background {
+    background-color: rgba(11, 19, 36, var(--opacity, 1)) !important;
+    padding-bottom: 10% !important;
+    padding-top: 10% !important;
+   
+}
+
+.lernskill-background h1 {
+    color: white;
+  
+}
+
+span {
+    fill: #754ffe;
+}
+
+.lernskill-background p {
+    color: white;
+}
+.icon-one{
+    border: 2px solid dimgrey;
+    border-radius: 50px !important;
+}
+.icon-two{
+    border: 2px solid dimgray;
+    border-radius: 10% !important;
+}
+.icon-three{
+    border: 2px solid dimgray;
+    border-radius: 10% !important;
+}
+.icon-two-svg{
+    color: white !important;
+}
